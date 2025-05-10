@@ -1,10 +1,303 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <title>$Title$</title>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+    <title>Mother's Day Scrapbook</title>
+    <style>
+        body {
+            margin: 0;
+            background: #caf0f8;
+            font-family: 'Comic Sans MS', cursive, sans-serif;
+            padding: 2rem;
+        }
+
+        .scrapbook {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            gap: 2rem;
+        }
+
+        .card {
+            width: 300px;
+            height: 400px;
+            perspective: 1000px;
+            position: relative;
+        }
+
+        .inner {
+            width: 100%;
+            height: 100%;
+            transition: transform 0.8s;
+            transform-style: preserve-3d;
+            position: relative;
+        }
+
+        .flipped {
+            transform: rotateY(180deg);
+        }
+
+        .front, .back {
+            position: absolute;
+            width: 100%;
+            height: 100%;
+            border-radius: 15px;
+            overflow: hidden;
+            backface-visibility: hidden;
+            box-shadow: 0 4px 8px rgba(0,0,0,0.2);
+            box-sizing: border-box;
+        }
+
+        .front img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            display: block;
+        }
+
+        .back {
+            background: #90e0ef;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            transform: rotateY(180deg);
+            padding: 1rem;
+            font-size: 1.2rem;
+            text-align: center;
+        }
+
+        /* 📱 Mobile cleanup */
+        @media (max-width: 767px) {
+            .scrapbook {
+                flex-direction: column;
+                align-items: center;
+            }
+        }
+    </style>
 </head>
 <body>
-$END$
+
+<h1 style="text-align:center;">🌸 Fijne Moederdag! 🌸</h1>
+
+<div class="scrapbook">
+    <div class="card" onclick="flipCard(this)">
+        <div class="inner">
+            <div class="front">
+                <img src="foto's moederdag/signal-2025-05-10-205235.jpeg" alt="Mom 1">
+            </div>
+            <div class="back"> Luxemburg --> huis</div>
+        </div>
+    </div>
+
+    <div class="card" onclick="flipCard(this)">
+        <div class="inner">
+            <div class="front">
+                <img src="foto's moederdag/signal-2025-05-10-205311_014.png" alt="Mom 3">
+            </div>
+            <div class="back"> Bart Peeters (deel 1)</div>
+        </div>
+    </div>
+
+    <div class="card" onclick="flipCard(this)">
+        <div class="inner">
+            <div class="front">
+                <img src="foto's moederdag/signal-2025-05-10-205235_003.jpeg" alt="Mom 3">
+            </div>
+            <div class="back"> Pingpong op kerst </div>
+        </div>
+    </div>
+
+    <div class="card" onclick="flipCard(this)">
+        <div class="inner">
+            <div class="front">
+                <img src="foto's moederdag/signal-2025-05-10-205311.png" alt="Mom 3">
+            </div>
+            <div class="back">Op bezoek bij de koning </div>
+        </div>
+    </div>
+
+    <div class="card" onclick="flipCard(this)">
+        <div class="inner">
+            <div class="front">
+                <img src="foto's moederdag/signal-2025-05-10-205235_002.jpeg" alt="Mom 2">
+            </div>
+            <div class="back"> Wandelen blijkt vermoeiend</div>
+        </div>
+    </div>
+
+    <div class="card" onclick="flipCard(this)">
+        <div class="inner">
+            <div class="front">
+                <img src="foto's moederdag/signal-2025-05-10-205549.jpeg" alt="Mom 3">
+            </div>
+            <div class="back"> Bente is sterk </div>
+        </div>
+    </div>
+
+    <div class="card" onclick="flipCard(this)">
+        <div class="inner">
+            <div class="front">
+                <img src="foto's moederdag/signal-2025-05-10-205311_002.png" alt="Mom 3">
+            </div>
+            <div class="back"> Cannelloni maken</div>
+        </div>
+    </div>
+
+    <div class="card" onclick="flipCard(this)">
+        <div class="inner">
+            <div class="front">
+                <img src="foto's moederdag/signal-2025-05-10-210925.jpeg" alt="Mom 3">
+            </div>
+            <div class="back"> Toch eens poseren op de stoeltjes </div>
+        </div>
+    </div>
+
+    <div class="card" onclick="flipCard(this)">
+        <div class="inner">
+            <div class="front">
+                <img src="foto's moederdag/signal-2025-05-10-205311_004.png" alt="Mom 3">
+            </div>
+            <div class="back"> Wandelen in Luxemburg</div>
+        </div>
+    </div>
+
+    <div class="card" onclick="flipCard(this)">
+        <div class="inner">
+            <div class="front">
+                <img src="foto's moederdag/signal-2025-05-10-205311_005.png" alt="Mom 3">
+            </div>
+            <div class="back">Puzzelen </div>
+        </div>
+    </div>
+
+    <div class="card" onclick="flipCard(this)">
+        <div class="inner">
+            <div class="front">
+                <img src="foto's moederdag/signal-2025-05-10-205311_006.png" alt="Mom 3">
+            </div>
+            <div class="back">🤟</div>
+        </div>
+    </div>
+
+    <div class="card" onclick="flipCard(this)">
+        <div class="inner">
+            <div class="front">
+                <img src="foto's moederdag/signal-2025-05-10-205311_003.png" alt="Mom 3">
+            </div>
+            <div class="back">Samen wandelen</div>
+        </div>
+    </div>
+
+    <div class="card" onclick="flipCard(this)">
+        <div class="inner">
+            <div class="front">
+                <img src="foto's moederdag/signal-2025-05-10-205945.jpeg" alt="Mom 3">
+            </div>
+            <div class="back"> Bart Peeters (deel 2)</div>
+        </div>
+    </div>
+
+    <div class="card" onclick="flipCard(this)">
+        <div class="inner">
+            <div class="front">
+                <img src="foto's moederdag/signal-2025-05-10-205311_008.png" alt="Mom 3">
+            </div>
+            <div class="back">Samen nieuwjaar vieren 🎉</div>
+        </div>
+    </div>
+
+    <div class="card" onclick="flipCard(this)">
+        <div class="inner">
+            <div class="front">
+                <img src="foto's moederdag/signal-2025-05-10-210846.jpeg" alt="Mom 3">
+            </div>
+            <div class="back"> De bloemen in Laken fotograferen</div>
+        </div>
+    </div>
+
+    <div class="card" onclick="flipCard(this)">
+        <div class="inner">
+            <div class="front">
+                <img src="foto's moederdag/signal-2025-05-10-205311_009.png" alt="Mom 3">
+            </div>
+            <div class="back"> Nacho's voor de tv </div>
+        </div>
+    </div>
+
+    <div class="card" onclick="flipCard(this)">
+        <div class="inner">
+            <div class="front">
+                <img src="foto's moederdag/signal-2025-05-10-205956.jpeg" alt="Mom 3">
+            </div>
+            <div class="back">Bart Peeters (deel 3)</div>
+        </div>
+    </div>
+
+    <div class="card" onclick="flipCard(this)">
+        <div class="inner">
+            <div class="front">
+                <img src="foto's moederdag/signal-2025-05-10-205311_011.png" alt="Mom 3">
+            </div>
+            <div class="back">kerst bij opa en oma 🍽</div>
+        </div>
+    </div>
+
+    <div class="card" onclick="flipCard(this)">
+        <div class="inner">
+            <div class="front">
+                <img src="foto's moederdag/signal-2025-05-10-205311_010.png" alt="Mom 3">
+            </div>
+            <div class="back">Blokwandeling als pauze 📚📖</div>
+        </div>
+    </div>
+
+
+    <div class="card" onclick="flipCard(this)">
+        <div class="inner">
+            <div class="front">
+                <img src="foto's moederdag/signal-2025-05-10-205311_012.png" alt="Mom 3">
+            </div>
+            <div class="back"> ✌️ </div>
+        </div>
+    </div>
+
+    <div class="card" onclick="flipCard(this)">
+        <div class="inner">
+            <div class="front">
+                <img src="foto's moederdag/signal-2025-05-10-205311_013.png" alt="Mom 3">
+            </div>
+            <div class="back">Kerst in Menen</div>
+        </div>
+    </div>
+
+    <div class="card" onclick="flipCard(this)">
+        <div class="inner">
+            <div class="front">
+                <img src="foto's moederdag/signal-2025-05-10-205514.jpeg" alt="Mom 3">
+            </div>
+            <div class="back"> Sterres voetbaltraining ⚽️</div>
+        </div>
+    </div>
+
+    <div class="card" onclick="flipCard(this)">
+        <div class="inner">
+            <div class="front">
+                <img src="foto's moederdag/signal-2025-05-10-211102.jpeg" alt="Mom 3">
+            </div>
+            <div class="back"> Genieten van het Engelse platteland (met een door mama geschilde appel)</div>
+        </div>
+    </div>
+
+    <!-- Add more cards as needed -->
+</div>
+
+<script>
+    function flipCard(cardElement) {
+        const inner = cardElement.querySelector('.inner');
+        inner.classList.toggle('flipped');
+    }
+</script>
+
 </body>
 </html>
